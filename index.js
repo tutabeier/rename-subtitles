@@ -18,11 +18,10 @@ if (subtitles.length !== episodes.length) {
   process.exit(1)
 }
 
-const newSubtitles = subtitles.map((subtitle, index) => {
+subtitles.forEach((subtitle, index) => {
   const newSubtitleName = episodes[index].replace('mkv', 'srt')
   console.info(`Renaming ${subtitle} to ${newSubtitleName}`)
   fs.renameSync(subtitle, newSubtitleName)
-  return newSubtitleName
 })
 
 console.info('Done! \o/')
