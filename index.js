@@ -14,7 +14,7 @@ const episodes = files.filter(file => filterByExtension(file, episodesExtension)
 console.info(`Found ${subtitles.length} subtitles and ${episodes.length} episodes`)
 
 if (subtitles.length !== episodes.length) {
-  console.error('Number of subtitles and videos differ. Stoping to avoid damages. :D')
+  console.error('Number of subtitles and videos differ. Stopping to avoid damages. :D')
   process.exit(1)
 }
 
